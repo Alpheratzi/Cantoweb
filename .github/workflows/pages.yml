@@ -1,0 +1,7 @@
+  - name: Upload artifact for GitHub Pages
+    uses: actions/upload-pages-artifact@v1
+    with:
+      path: ./
+
+  - name: Deploy to GitHub Pages
+    uses: actions/deploy-pages@v1
