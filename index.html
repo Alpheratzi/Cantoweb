@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Sitio oficial de Dúo Canto y Cuerda. Música tradicional latinoamericana, boleros, rumbas, zambas, milongas y fusiones modernas. Contrataciones y conciertos.">
+    <title>Dúo Canto y Cuerda | Música Latinoamericana y Fusión</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Main Stylesheet -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Header & Navigation -->
+    <header class="site-header" id="header">
+        <div class="container header-container">
+            <a href="#" class="logo">
+                <span class="logo-serif">Canto & Cuerda</span>
+            </a>
+            
+            <!-- Mobile Menu Toggle Button -->
+            <button class="nav-toggle" id="navToggle" aria-label="Abrir menú">
+                <span class="hamburger"></span>
+            </button>
+
+            <!-- Navigation Links -->
+            <nav class="nav-menu" id="navMenu">
+                <ul>
+                    <li><a href="#inicio" class="nav-link active">Inicio</a></li>
+                    <li><a href="#nosotros" class="nav-link">Nosotros</a></li>
+                    <li><a href="#musica" class="nav-link">Música</a></li>
+                    <li><a href="#conciertos" class="nav-link">Conciertos</a></li>
+                    <li><a href="#videos" class="nav-link">Videos</a></li>
+                    <li><a href="#contacto" class="nav-link">Contacto</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="inicio" class="hero" style="background-image: linear-gradient(rgba(18, 15, 14, 0.4), rgba(18, 15, 14, 0.9)), url('assets/duo_hero_bg.png');">
+            <div class="container hero-content">
+                <span class="hero-subtitle">Voz y Guitarra Acústica</span>
+                <h1 class="hero-title">Ecos de Iberoamérica</h1>
+                <p class="hero-description">Un viaje íntimo a través del bolero, la rumba, la zamba y la milonga, interpretado con alma, calidez y cuerdas vibrantes.</p>
+                <div class="hero-actions">
+                    <a href="#contacto" class="btn btn-primary">Reservar Fecha</a>
+                    <a href="#musica" class="btn btn-secondary">Escuchar Demo</a>
+                </div>
+            </div>
+            <!-- Decorative wave or bottom gradient transition -->
+            <div class="hero-fade-bottom"></div>
+        </section>
+
+        <!-- About Us Section -->
+        <section id="nosotros" class="section section-about">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-tag">La Esencia</span>
+                    <h2>Nuestra Historia</h2>
+                    <div class="underline"></div>
+                </div>
+
+                <div class="about-grid">
+                    <div class="about-text">
+                        <p class="lead">Nacidos de la pasión por las raíces acústicas de España y Latinoamérica, unimos voz y guitarra en una conversación íntima de acordes y poesía.</p>
+                        <p>Nuestro repertorio rinde homenaje a los grandes compositores tradicionales de boleros, rumbas, zambas argentinas y milongas uruguayas. Nos encanta explorar la riqueza del lenguaje ibérico, cantando no solo en español, sino también explorando la dulzura de la bossa nova en portugués y la melancolía del acorde en la chanson francesa.</p>
+                        <p>Cada presentación es un diálogo cercano con el público, donde la sencillez de una voz y la sutileza de una guitarra española llenan el espacio con calidez y emoción pura.</p>
+                        
+                        <div class="bio-features">
+                            <div class="feature-item">
+                                <span class="feature-icon">🎙️</span>
+                                <h4>Voz Cálida</h4>
+                                <p>Interpretaciones emotivas en español, francés y portugués.</p>
+                            </div>
+                            <div class="feature-item">
+                                <span class="feature-icon">🎸</span>
+                                <h4>Guitarra de Nylon</h4>
+                                <p>Arreglos propios que entrelazan ritmos folclóricos y armonías modernas.</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="about-visual">
+                        <div class="visual-wrapper">
+                            <img src="assets/duo_hero_bg.png" alt="Dúo Canto y Cuerda en vivo" class="img-responsive rounded shadow-lg">
+                            <div class="visual-badge">
+                                <span class="badge-number">10+</span>
+                                <span class="badge-text">Años de Armonía</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Music Section (Audio Player & Repertoire) -->
+        <section id="musica" class="section section-music">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-tag">Sonidos</span>
+                    <h2>Nuestra Música</h2>
+                    <div class="underline"></div>
+                </div>
+
+                <div class="music-grid">
+                    <!-- Custom Audio Player Card -->
+                    <div class="player-card glass">
+                        <div class="player-display">
+                            <div class="track-art" id="playerArt">🎵</div>
+                            <div class="track-info">
+                                <h3 id="playerTitle">Selecciona una pista</h3>
+                                <p id="playerArtist">Dúo Canto y Cuerda</p>
+                            </div>
+                        </div>
+
+                        <!-- Progress Bar -->
+                        <div class="player-progress-container">
+                            <span class="time-label" id="currentTime">0:00</span>
+                            <div class="progress-bar" id="progressBar">
+                                <div class="progress-fill" id="progressFill"></div>
+                            </div>
+                            <span class="time-label" id="totalDuration">0:00</span>
+                        </div>
+
+                        <!-- Controls -->
+                        <div class="player-controls">
+                            <button id="prevBtn" class="control-btn" aria-label="Pista anterior">
+                                <svg viewBox="0 0 24 24"><path d="M6 6h2v12H6zm3.5 6l8.5 6V6z"/></svg>
+                            </button>
+                            <button id="playBtn" class="control-btn play-main" aria-label="Reproducir">
+                                <svg viewBox="0 0 24 24" id="playIcon"><path d="M8 5v14l11-7z"/></svg>
+                            </button>
+                            <button id="nextBtn" class="control-btn" aria-label="Siguiente pista">
+                                <svg viewBox="0 0 24 24"><path d="M6 18l8.5-6L6 6zm9-12h2v12h-2z"/></svg>
+                            </button>
+                        </div>
+
+                        <!-- Audio Element (Uses royalty free mock audio/synthesizer strings or silent generators if needed, but we will mock the play state dynamically so user can interact and see progress bar run) -->
+                        <audio id="audioElement" preload="metadata"></audio>
+
+                        <div class="volume-container">
+                            <span class="volume-icon">🔊</span>
+                            <input type="range" id="volumeSlider" min="0" max="1" step="0.1" value="0.8" class="volume-slider" aria-label="Volumen">
+                        </div>
+                    </div>
+
+                    <!-- Tracklist and Repertoire -->
+                    <div class="music-repertoire">
+                        <h3>Demos Acústicos</h3>
+                        <ul class="tracklist" id="tracklist">
+                            <!-- Tracks dynamically populated in JS or hardcoded for absolute reliability -->
+                            <li class="track-item active" data-src="assets/mock_track1.mp3" data-index="0">
+                                <span class="track-number">01</span>
+                                <div class="track-meta">
+                                    <span class="track-name">Amor de mis Amores</span>
+                                    <span class="track-genre">Bolero - Clásico Latino</span>
+                                </div>
+                                <span class="track-time">3:24</span>
+                            </li>
+                            <li class="track-item" data-src="assets/mock_track2.mp3" data-index="1">
+                                <span class="track-number">02</span>
+                                <div class="track-meta">
+                                    <span class="track-name">Luna Tucumana</span>
+                                    <span class="track-genre">Zamba - Tradición Argentina</span>
+                                </div>
+                                <span class="track-time">2:58</span>
+                            </li>
+                            <li class="track-item" data-src="assets/mock_track3.mp3" data-index="2">
+                                <span class="track-number">03</span>
+                                <div class="track-meta">
+                                    <span class="track-name">Rumba del Alba</span>
+                                    <span class="track-genre">Rumba - Estilo Español</span>
+                                </div>
+                                <span class="track-time">3:12</span>
+                            </li>
+                            <li class="track-item" data-src="assets/mock_track4.mp3" data-index="3">
+                                <span class="track-number">04</span>
+                                <div class="track-meta">
+                                    <span class="track-name">Chega de Saudade</span>
+                                    <span class="track-genre">Bossa Nova - Portugués</span>
+                                </div>
+                                <span class="track-time">3:40</span>
+                            </li>
+                            <li class="track-item" data-src="assets/mock_track5.mp3" data-index="4">
+                                <span class="track-number">05</span>
+                                <div class="track-meta">
+                                    <span class="track-name">La Vie en Rose</span>
+                                    <span class="track-genre">Chanson - Francés & Guitarra</span>
+                                </div>
+                                <span class="track-time">2:45</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Concerts Section -->
+        <section id="conciertos" class="section section-concerts">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-tag">Agenda</span>
+                    <h2>Próximos Conciertos</h2>
+                    <div class="underline"></div>
+                </div>
+
+                <div class="concerts-list">
+                    <!-- Concert 1 -->
+                    <div class="concert-card glass">
+                        <div class="concert-date">
+                            <span class="day">18</span>
+                            <span class="month">Jun</span>
+                        </div>
+                        <div class="concert-info">
+                            <h3>Noche de Boleros y Cuerdas</h3>
+                            <p class="venue">📍 Centro Cultural La Bohemia - Madrid</p>
+                            <p class="time">⏰ 20:30 h | Entrada Libre hasta completar aforo</p>
+                        </div>
+                        <div class="concert-status">
+                            <span class="status-tag status-free">Acceso Libre</span>
+                            <a href="#contacto" class="btn btn-sm btn-outline">Consultar</a>
+                        </div>
+                    </div>
+
+                    <!-- Concert 2 -->
+                    <div class="concert-card glass">
+                        <div class="concert-date">
+                            <span class="day">04</span>
+                            <span class="month">Jul</span>
+                        </div>
+                        <div class="concert-info">
+                            <h3>Festival Ecos del Sur</h3>
+                            <p class="venue">📍 Auditorio del Parque de la Constitución - Toledo</p>
+                            <p class="time">⏰ 22:00 h | Rumba, Milonga y Ritmos de Ida y Vuelta</p>
+                        </div>
+                        <div class="concert-status">
+                            <span class="status-tag status-tickets">Entradas Disponibles</span>
+                            <a href="#" class="btn btn-sm btn-primary">Comprar Ticket</a>
+                        </div>
+                    </div>
+
+                    <!-- Concert 3 -->
+                    <div class="concert-card glass">
+                        <div class="concert-date">
+                            <span class="day">25</span>
+                            <span class="month">Jul</span>
+                        </div>
+                        <div class="concert-info">
+                            <h3>Concierto Íntimo de Verano</h3>
+                            <p class="venue">📍 Jardines de la Casa de la Música - Sevilla</p>
+                            <p class="time">⏰ 21:00 h | Cantos tradicionales y bossa nova</p>
+                        </div>
+                        <div class="concert-status">
+                            <span class="status-tag status-soldout">Agotado</span>
+                            <button class="btn btn-sm btn-disabled" disabled>Agotado</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Video Gallery & Upload Section -->
+        <section id="videos" class="section section-videos">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-tag">Multimedia</span>
+                    <h2>Momentos y Ensayos</h2>
+                    <div class="underline"></div>
+                    <p class="section-intro">Mira nuestros fragmentos de ensayos y actuaciones. ¡Puedes subir tus propios videos del dúo usando el botón de abajo para ver cómo funciona el archivo digital!</p>
+                </div>
+
+                <!-- Video Gallery Grid -->
+                <div class="video-gallery-container">
+                    
+                    <!-- Upload Box (Styled Drag and Drop) -->
+                    <div class="upload-zone glass" id="uploadZone">
+                        <input type="file" id="videoInput" accept="video/mp4,video/webm" class="hidden-input">
+                        <div class="upload-content">
+                            <span class="upload-icon">📤</span>
+                            <h3>Sube un video corto</h3>
+                            <p>Arrastra tu archivo MP4/WebM aquí o haz clic para buscarlo</p>
+                            <span class="file-limits">Límite recomendado: 20MB (Guardado local persistente)</span>
+                        </div>
+                        <div class="upload-progress-container" id="uploadProgressContainer">
+                            <div class="upload-progress-bar">
+                                <div class="upload-progress-fill" id="uploadProgressFill"></div>
+                            </div>
+                            <span id="uploadStatusText">Subiendo video...</span>
+                        </div>
+                    </div>
+
+                    <!-- Video Grid -->
+                    <div class="video-grid" id="videoGrid">
+                        <!-- Default Video 1 (Pre-loaded Mock Card) -->
+                        <div class="video-card glass" data-video-type="default" data-src="assets/demo_video1.mp4">
+                            <div class="video-thumbnail">
+                                <div class="play-overlay">
+                                    <span class="play-symbol">▶</span>
+                                </div>
+                                <span class="video-duration">0:45</span>
+                            </div>
+                            <div class="video-details">
+                                <h4>Ensayo: Alfonsina y el Mar (Zamba)</h4>
+                                <p>Un fragmento de voz y guitarra acústica en nuestro estudio.</p>
+                            </div>
+                        </div>
+
+                        <!-- Default Video 2 (Pre-loaded Mock Card) -->
+                        <div class="video-card glass" data-video-type="default" data-src="assets/demo_video2.mp4">
+                            <div class="video-thumbnail">
+                                <div class="play-overlay">
+                                    <span class="play-symbol">▶</span>
+                                </div>
+                                <span class="video-duration">1:12</span>
+                            </div>
+                            <div class="video-details">
+                                <h4>Directo: Sabor a Mí (Bolero)</h4>
+                                <p>Grabado en vivo en la sala cultural Clamores.</p>
+                            </div>
+                        </div>
+
+                        <!-- Uploaded videos will inject here dynamically from IndexedDB -->
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact & Booking Section -->
+        <section id="contacto" class="section section-contact">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-tag">Contacto</span>
+                    <h2>Reserva o Contratación</h2>
+                    <div class="underline"></div>
+                </div>
+
+                <div class="contact-grid">
+                    <!-- Contact Information Card -->
+                    <div class="contact-info-card glass">
+                        <h3>¿Tienes un evento?</h3>
+                        <p>Nuestra música acústica es perfecta para bodas, celebraciones privadas, veladas de restaurantes, festivales locales y salas culturales.</p>
+                        <p>Nos adaptamos a las necesidades técnicas del espacio; contamos con equipo propio de amplificación idóneo para espacios medianos e íntimos.</p>
+
+                        <div class="contact-details">
+                            <div class="contact-detail-item">
+                                <span class="detail-icon">✉️</span>
+                                <div>
+                                    <h4>Correo Electrónico</h4>
+                                    <p><a href="mailto:info@cantoycuerda.com">info@cantoycuerda.com</a></p>
+                                </div>
+                            </div>
+                            <div class="contact-detail-item">
+                                <span class="detail-icon">📞</span>
+                                <div>
+                                    <h4>Teléfono y WhatsApp</h4>
+                                    <p><a href="tel:+34600000000">+34 600 000 000</a></p>
+                                </div>
+                            </div>
+                            <div class="contact-detail-item">
+                                <span class="detail-icon">📍</span>
+                                <div>
+                                    <h4>Ubicación Base</h4>
+                                    <p>Madrid, España (Disponibilidad para viajar)</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Contact/Booking Form -->
+                    <div class="booking-form-wrapper glass">
+                        <form id="bookingForm" class="booking-form">
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="clientName">Nombre / Organización</label>
+                                    <input type="text" id="clientName" required placeholder="Tu nombre completo">
+                                </div>
+                                <div class="form-group">
+                                    <label for="clientEmail">Correo Electrónico</label>
+                                    <input type="email" id="clientEmail" required placeholder="correo@ejemplo.com">
+                                </div>
+                            </div>
+
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="eventDate">Fecha del Evento</label>
+                                    <input type="date" id="eventDate" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="eventType">Tipo de Evento</label>
+                                    <select id="eventType" required>
+                                        <option value="" disabled selected>Selecciona una opción</option>
+                                        <option value="boda">Boda / Ceremonia</option>
+                                        <option value="concierto">Sala Cultural / Teatro</option>
+                                        <option value="privado">Celebración Privada / Cumpleaños</option>
+                                        <option value="corporativo">Evento Corporativo</option>
+                                        <option value="otro">Otro</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="eventLocation">Ciudad / Localización</label>
+                                <input type="text" id="eventLocation" required placeholder="Ej: Toledo, Madrid, Sevilla...">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="clientMessage">Mensaje / Requerimientos Especiales</label>
+                                <textarea id="clientMessage" rows="5" required placeholder="Cuéntanos un poco sobre tu evento: horario estimado, si necesitas equipo de sonido, canciones especiales que quieras escuchar..."></textarea>
+                            </div>
+
+                            <button type="submit" class="btn btn-primary btn-block">Enviar Solicitud</button>
+                        </form>
+                        <div class="form-success-message" id="formSuccessMessage">
+                            <span class="success-icon">✨</span>
+                            <h3>¡Mensaje Recibido con Éxito!</h3>
+                            <p>Gracias por contactar con Dúo Canto y Cuerda. Nos pondremos en contacto contigo en un plazo de 24-48 horas para detallar el presupuesto y la disponibilidad.</p>
+                            <button id="successCloseBtn" class="btn btn-sm btn-outline">Enviar otro mensaje</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="container footer-container">
+            <div class="footer-about">
+                <h3>Canto & Cuerda</h3>
+                <p>Armonizando momentos únicos a través de las grandes canciones iberoamericanas.</p>
+            </div>
+            <div class="footer-links">
+                <h4>Enlaces rápidos</h4>
+                <ul>
+                    <li><a href="#inicio">Inicio</a></li>
+                    <li><a href="#nosotros">Nosotros</a></li>
+                    <li><a href="#musica">Música</a></li>
+                    <li><a href="#conciertos">Conciertos</a></li>
+                    <li><a href="#videos">Videos</a></li>
+                </ul>
+            </div>
+            <div class="footer-social">
+                <h4>Síguenos</h4>
+                <div class="social-icons">
+                    <a href="#" aria-label="Instagram">📸</a>
+                    <a href="#" aria-label="YouTube">🎥</a>
+                    <a href="#" aria-label="Spotify">🎵</a>
+                    <a href="#" aria-label="Facebook">👤</a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Dúo Canto y Cuerda. Diseñado con alma acústica.</p>
+        </div>
+    </footer>
+
+    <!-- Video Lightbox Player -->
+    <div class="lightbox" id="videoLightbox" aria-hidden="true" role="dialog">
+        <div class="lightbox-overlay" id="lightboxOverlay"></div>
+        <div class="lightbox-content">
+            <button class="lightbox-close" id="lightboxCloseBtn" aria-label="Cerrar video">&times;</button>
+            <div class="video-wrapper">
+                <video id="lightboxVideo" controls autoplay></video>
+            </div>
+            <div class="lightbox-details">
+                <h3 id="lightboxVideoTitle">Título del Video</h3>
+                <p id="lightboxVideoDesc">Descripción del video</p>
+                <button id="deleteUploadedVideoBtn" class="btn btn-sm btn-danger hidden">Eliminar Video de mi Galería</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main JavaScript Logic -->
+    <script src="app.js"></script>
+</body>
+</html>
