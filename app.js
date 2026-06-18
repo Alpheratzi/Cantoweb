@@ -1,5 +1,5 @@
 /**
- * Dúo Canto y Cuerda - Main JS Logic
+ * Cuéntame - Main JS Logic
  */
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -368,7 +368,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 
                 const videoData = {
                     title: prompt("Introduce un título para tu video:", file.name.substring(0, file.name.lastIndexOf('.')) || file.name) || "Video de Ensayo",
-                    description: prompt("Escribe una breve descripción:", "Video corto grabado por el público/duo.") || "Grabación de ensayo.",
+                    description: prompt("Escribe una breve descripción:", "Video corto grabado por el público/Cuéntame.") || "Grabación de ensayo.",
                     date: new Date().toLocaleDateString('es-ES', { day: 'numeric', month: 'short', year: 'numeric' }),
                     duration: metadata.durationText,
                     thumbnail: metadata.thumbnail || '', // Base64 Thumbnail or placeholder
