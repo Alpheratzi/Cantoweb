@@ -1521,3 +1521,115 @@ img {
         grid-column: span 1;
     }
 }
+
+/* --- Visual Edit Mode Styles --- */
+.edit-mode-btn {
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    background: linear-gradient(135deg, var(--color-gold, #cda45e), var(--color-gold-muted, #b08a46));
+    color: #120f0e;
+    border: none;
+    border-radius: 50px;
+    padding: 12px 24px;
+    font-weight: 600;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.4);
+    cursor: pointer;
+    z-index: 10000;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: all 0.3s ease;
+    font-family: inherit;
+    font-size: 0.9rem;
+}
+.edit-mode-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(205, 164, 94, 0.4);
+}
+.edit-mode-btn svg {
+    width: 16px;
+    height: 16px;
+    fill: currentColor;
+}
+
+/* Floating Editor Panel */
+.editor-panel {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(18, 15, 14, 0.95);
+    border-top: 2px solid var(--color-gold, #cda45e);
+    backdrop-filter: blur(10px);
+    padding: 15px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 -5px 25px rgba(0,0,0,0.5);
+    z-index: 10001;
+    transform: translateY(100%);
+    transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.editor-panel.active {
+    transform: translateY(0);
+}
+.editor-panel-info {
+    color: #e5dada;
+}
+.editor-panel-info h4 {
+    color: var(--color-gold, #cda45e);
+    margin: 0 0 4px 0;
+    font-size: 1.1rem;
+}
+.editor-panel-info p {
+    margin: 0;
+    font-size: 0.85rem;
+    color: #a09090;
+}
+.editor-panel-actions {
+    display: flex;
+    gap: 15px;
+}
+.editor-btn {
+    padding: 10px 20px;
+    border-radius: 4px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    font-size: 0.9rem;
+    font-family: inherit;
+}
+.editor-btn-save {
+    background: var(--color-gold, #cda45e);
+    color: #120f0e;
+    border: none;
+}
+.editor-btn-save:hover {
+    background: #e0b66f;
+}
+.editor-btn-cancel {
+    background: transparent;
+    color: #e5dada;
+    border: 1px solid #4a3f3a;
+}
+.editor-btn-cancel:hover {
+    background: rgba(255,255,255,0.05);
+    border-color: #a09090;
+}
+
+/* Editable Elements Highlight */
+body.edit-mode-active [contenteditable="true"] {
+    outline: 2px dashed rgba(205, 164, 94, 0.6) !important;
+    outline-offset: 4px;
+    cursor: text;
+    transition: outline 0.2s ease;
+}
+body.edit-mode-active [contenteditable="true"]:hover {
+    outline: 2px dashed var(--color-gold, #cda45e) !important;
+    background: rgba(205, 164, 94, 0.05);
+}
+body.edit-mode-active [contenteditable="true"]:focus {
+    outline: 2px solid var(--color-gold, #cda45e) !important;
+    background: rgba(205, 164, 94, 0.1);
+}
