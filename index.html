@@ -11,10 +11,10 @@
     <!-- Main Stylesheet -->
     <link rel="stylesheet" href="style.css">
 </head>
-<body class="" style="overflow: hidden;">
+<body>
 
     <!-- Header & Navigation -->
-    <header class="site-header scrolled" id="header">
+    <header class="site-header" id="header">
         <div class="container header-container">
             <a href="#" class="logo">
                 <span class="logo-serif">Cuéntame</span>
@@ -28,11 +28,11 @@
             <!-- Navigation Links -->
             <nav class="nav-menu" id="navMenu">
                 <ul>
-                    <li><a href="#inicio" class="nav-link">Inicio</a></li>
+                    <li><a href="#inicio" class="nav-link active">Inicio</a></li>
                     <li><a href="#nosotros" class="nav-link">Nosotros</a></li>
                     <li><a href="#musica" class="nav-link">Música</a></li>
                     <li><a href="#conciertos" class="nav-link">Conciertos</a></li>
-                    <li><a href="#videos" class="nav-link active">Videos</a></li>
+                    <li><a href="#videos" class="nav-link">Videos</a></li>
                     <li><a href="#contacto" class="nav-link">Contacto</a></li>
                 </ul>
             </nav>
@@ -66,19 +66,19 @@
 
                 <div class="about-grid">
                     <div class="about-text">
-                        <p class="lead">Nacidos de la pasión por las raíces acústicas de España y Latinoamérica, unimos voz y guitarra en una conversación íntima de acordes y poesía.</p>
-                        <p>Nuestro repertorio rinde homenaje a los grandes compositores tradicionales de boleros, rumbas, zambas argentinas y milongas uruguayas. Nos encanta explorar la riqueza del lenguaje ibérico, cantando no solo en español, sino también explorando la dulzura de la bossa nova en portugués y la melancolía del acorde en la chanson francesa.</p>
-                        <p>Cada presentación es un diálogo cercano con el público, donde la sencillez de una voz y la sutileza de una guitarra española llenan el espacio con calidez y emoción pura.</p>
+                        <p class="lead">Nacidos de la pasión por las raíces acústicas de España y Latinoamérica, unimos voz y guitarra para cantar nuestras canciones y dejarnos contar vuestras historias.</p>
+                        <p>Nuestro repertorio rinde homenaje a los grandes compositores tradicionales de boleros, rumbas, zambas argentinas y milongas, así como nuevos artistas a ambos lados del Atlántico. Aunque nuestro repertorio es mayoritariamente hispano, también nos gusta explorar otros idiomas como la bossa nova en portugués y la melancolía de la chanson francesa.</p>
+                        <p>Cada presentación es un diálogo con el público, dejando a la sencillez de una guitarra y una voz comunicarse en el idioma universal de la emoción.</p>
                         
                         <div class="bio-features">
                             <div class="feature-item">
                                 <span class="feature-icon">🎙️</span>
-                                <h4>Voz Cálida</h4>
-                                <p>Interpretaciones emotivas en español, francés y portugués.</p>
+                                <h4>Voz: Raquel</h4>
+                                <p>Interpretaciones en español, francés, portugués e italiano.</p>
                             </div>
                             <div class="feature-item">
                                 <span class="feature-icon">🎸</span>
-                                <h4>Guitarra de Nylon</h4>
+                                <h4>Guitarra y voz: Luis</h4>
                                 <p>Arreglos propios que entrelazan ritmos folclóricos y armonías modernas.</p>
                             </div>
                         </div>
@@ -112,18 +112,18 @@
                         <div class="player-display">
                             <div class="track-art" id="playerArt">🎵</div>
                             <div class="track-info">
-                                <h3 id="playerTitle">Amor de mis Amores</h3>
+                                <h3 id="playerTitle">Selecciona una pista</h3>
                                 <p id="playerArtist">Cuéntame</p>
                             </div>
                         </div>
 
                         <!-- Progress Bar -->
                         <div class="player-progress-container">
-                            <span class="time-label" id="currentTime">1:21</span>
+                            <span class="time-label" id="currentTime">0:00</span>
                             <div class="progress-bar" id="progressBar">
-                                <div class="progress-fill" id="progressFill" style="width: 39.7059%;"></div>
+                                <div class="progress-fill" id="progressFill"></div>
                             </div>
-                            <span class="time-label" id="totalDuration">3:24</span>
+                            <span class="time-label" id="totalDuration">0:00</span>
                         </div>
 
                         <!-- Controls -->
@@ -150,7 +150,7 @@
 
                     <!-- Tracklist and Repertoire -->
                     <div class="music-repertoire">
-                        <h3>Demos Acústicos</h3>
+                        <h3>Versiones Acústicas</h3>
                         <ul class="tracklist" id="tracklist">
                             <!-- Tracks dynamically populated in JS or hardcoded for absolute reliability -->
                             <li class="track-item active" data-src="assets/mock_track1.mp3" data-index="0">
@@ -216,9 +216,9 @@
                             <span class="month">Jun</span>
                         </div>
                         <div class="concert-info">
-                            <h3>TBD</h3>
-                            <p class="venue">📍 TBD</p>
-                            <p class="time">⏰Hora h | Precio</p>
+                            <h3>Noche de Boleros y Cuerdas</h3>
+                            <p class="venue">📍 Centro Cultural La Bohemia - Madrid</p>
+                            <p class="time">⏰ 20:30 h | Entrada Libre hasta completar aforo</p>
                         </div>
                         <div class="concert-status">
                             <span class="status-tag status-free">Acceso Libre</span>
@@ -233,9 +233,9 @@
                             <span class="month">Jul</span>
                         </div>
                         <div class="concert-info">
-                            <h3>TBD</h3>
-                            <p class="venue">📍 TBD</p>
-                            <p class="time">⏰ <span style="font-size: 14.4px;">Hora h | Precio</span></p>
+                            <h3>Festival Ecos del Sur</h3>
+                            <p class="venue">📍 Auditorio del Parque de la Constitución - Toledo</p>
+                            <p class="time">⏰ 22:00 h | Rumba, Milonga y Ritmos de Ida y Vuelta</p>
                         </div>
                         <div class="concert-status">
                             <span class="status-tag status-tickets">Entradas Disponibles</span>
@@ -250,9 +250,9 @@
                             <span class="month">Jul</span>
                         </div>
                         <div class="concert-info">
-                            <h3>TBD</h3>
-                            <p class="venue">📍 TBD</p>
-                            <p class="time">⏰<span style="font-size: 14.4px;">Hora h | Precio</span></p>
+                            <h3>Concierto Íntimo de Verano</h3>
+                            <p class="venue">📍 Jardines de la Casa de la Música - Sevilla</p>
+                            <p class="time">⏰ 21:00 h | Cantos tradicionales y bossa nova</p>
                         </div>
                         <div class="concert-status">
                             <span class="status-tag status-soldout">Agotado</span>
@@ -459,16 +459,16 @@
     </footer>
 
     <!-- Video Lightbox Player -->
-    <div class="lightbox" id="videoLightbox" aria-hidden="false" role="dialog" style="display: flex;">
+    <div class="lightbox" id="videoLightbox" aria-hidden="true" role="dialog">
         <div class="lightbox-overlay" id="lightboxOverlay"></div>
         <div class="lightbox-content">
-            <button class="lightbox-close" id="lightboxCloseBtn" aria-label="Cerrar video">×</button>
+            <button class="lightbox-close" id="lightboxCloseBtn" aria-label="Cerrar video">&times;</button>
             <div class="video-wrapper">
-                <video id="lightboxVideo" controls="" autoplay="" src="https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4"></video>
+                <video id="lightboxVideo" controls autoplay></video>
             </div>
             <div class="lightbox-details">
-                <h3 id="lightboxVideoTitle">Directo: Sabor a Mí (Bolero)</h3>
-                <p id="lightboxVideoDesc">Grabado en vivo en la sala cultural Clamores.</p>
+                <h3 id="lightboxVideoTitle">Título del Video</h3>
+                <p id="lightboxVideoDesc">Descripción del video</p>
                 <button id="deleteUploadedVideoBtn" class="btn btn-sm btn-danger hidden">Eliminar Video de mi Galería</button>
             </div>
         </div>
@@ -547,6 +547,60 @@
                 document.querySelectorAll(editableSelector).forEach(el => {
                     el.removeAttribute('contenteditable');
                 });
+
+                // Reset runtime states (scrolling, lightbox, active nav, player progress) before saving
+                const headerEl = document.getElementById('header');
+                if (headerEl) headerEl.classList.remove('scrolled');
+                
+                document.body.removeAttribute('style');
+                document.body.className = '';
+                
+                document.querySelectorAll('.nav-menu a').forEach(link => {
+                    if (link.getAttribute('href') === '#inicio') {
+                        link.classList.add('active');
+                    } else {
+                        link.classList.remove('active');
+                    }
+                });
+
+                const playerCardEl = document.querySelector('.player-card');
+                if (playerCardEl) playerCardEl.classList.remove('playing');
+                const playerTitleEl = document.getElementById('playerTitle');
+                if (playerTitleEl) playerTitleEl.textContent = 'Selecciona una pista';
+                const currentTimeEl = document.getElementById('currentTime');
+                if (currentTimeEl) currentTimeEl.textContent = '0:00';
+                const totalDurationEl = document.getElementById('totalDuration');
+                if (totalDurationEl) totalDurationEl.textContent = '0:00';
+                const progressFillEl = document.getElementById('progressFill');
+                if (progressFillEl) {
+                    progressFillEl.style.width = '0%';
+                    progressFillEl.removeAttribute('style');
+                }
+
+                document.querySelectorAll('.track-item').forEach((item, idx) => {
+                    if (idx === 0) {
+                        item.classList.add('active');
+                    } else {
+                        item.classList.remove('active');
+                    }
+                });
+
+                const lightboxEl = document.getElementById('videoLightbox');
+                if (lightboxEl) {
+                    lightboxEl.setAttribute('aria-hidden', 'true');
+                    lightboxEl.removeAttribute('style');
+                }
+                const lightboxVideoEl = document.getElementById('lightboxVideo');
+                if (lightboxVideoEl) {
+                    lightboxVideoEl.src = '';
+                    lightboxVideoEl.removeAttribute('src');
+                }
+                const lightboxVideoTitleEl = document.getElementById('lightboxVideoTitle');
+                if (lightboxVideoTitleEl) lightboxVideoTitleEl.textContent = 'Título del Video';
+                const lightboxVideoDescEl = document.getElementById('lightboxVideoDesc');
+                if (lightboxVideoDescEl) lightboxVideoDescEl.textContent = 'Descripción del video';
+                const deleteVideoBtnEl = document.getElementById('deleteUploadedVideoBtn');
+                if (deleteVideoBtnEl) deleteVideoBtnEl.classList.add('hidden');
 
                 // Remove active classes
                 document.body.classList.remove('edit-mode-active');
